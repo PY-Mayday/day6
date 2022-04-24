@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace用于绑定Dao接口 -->
+<mapper namespace="com.tutu.shopplatform.Dao.UserDao">
+    <select id="selectUserByUserName" parameterType="String">
+        select * from User where uname = #{userName}
+    </select>
+</mapper>

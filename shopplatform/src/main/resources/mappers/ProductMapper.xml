@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace用于绑定Dao接口 -->
+<mapper namespace="com.tutu.shopplatform.Dao.ProductDao">
+    <select id = "selectProductInfo" parameterType="string" resultType="com.tutu.shopplatform.domain.Product">
+        select * from product where pname like concat('%', #{pname}, '%')
+    </select>
+</mapper>
